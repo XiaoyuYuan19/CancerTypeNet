@@ -48,7 +48,7 @@ The dataset consists of mutational catalogs and predicted signature activities f
 
 <img width="1189" height="989" alt="image" src="https://github.com/user-attachments/assets/771b1dd2-8fd6-473a-a4ec-4f84644c87a1" />
 
-*Cell: The cell with `fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(12, 10))` showing cancer type distributions*
+` showing cancer type distributions*
 
 ---
 
@@ -57,15 +57,6 @@ The dataset consists of mutational catalogs and predicted signature activities f
 ### Mutation Load Analysis
 
 We analyzed the total mutation counts across cancer types for different datasets:
-
-**[INSERT FIGURE: PCAWG WGS mutation load scatter plots]**
-*Cell: The cell with `_, ax = plt.subplots(nrows = len(sum_dict)//3+1, ncols = 3, figsize = (16, 5*len(sum_dict)/(3+1)))` for PCAWG WGS*
-
-**[INSERT FIGURE: Other WGS mutation load scatter plots]**
-*Cell: Similar plot for non-PCAWG WGS data*
-
-**[INSERT FIGURE: TCGA WES mutation load scatter plots]**
-*Cell: Similar plot for TCGA WES with log scale*
 
 Key findings:
 - WGS samples show higher mutation counts than WES samples
@@ -87,8 +78,6 @@ Key findings:
 - **Other WES**: 52% accuracy
 
 <img width="511" height="415" alt="image" src="https://github.com/user-attachments/assets/28bc007e-e955-495f-832f-fceeb60bbe3d" />
-
-*Cell: `ax = sns.heatmap(confusion_matrix(y_test_pcawg_wgs, model_pcawg_wgs.predict(X_test_pcawg_wgs)), annot = True)`*
 
 **Feature Importance Analysis**:
 - C>T mutation channel identified as most informative
@@ -137,12 +126,6 @@ Key findings:
 - **WGS_PCAWG Activity**: ~62% validation accuracy
 - **Combined (Catalog + Activity)**: Improved performance
 
-**[INSERT FIGURE: Training history plots showing accuracy and loss curves]**
-*Cell: From `plot_history()` function showing training and validation curves*
-
-**[INSERT FIGURE: Confusion matrix with F1 and Recall scores]**
-*Cell: From `plot_ax()` function showing detailed classification metrics*
-
 **34→21 Class Reduction**: Merging subtypes (e.g., Bone-Benign, Bone-Epith → Bone) improved interpretability with minimal accuracy loss.
 
 ---
@@ -164,10 +147,6 @@ Key findings:
 **Performance**: 
 - Achieved comparable performance to DNN
 - Better at capturing local mutation patterns
-
-**[INSERT FIGURE: CNN confusion matrix]**
-*Cell: From the CNN testing section showing the heatmap*
-
 ---
 
 ### 5. K-Nearest Neighbors (KNN)
@@ -180,12 +159,6 @@ Key findings:
 - **Dropping C>T**: Lowest accuracy drop → least biased channel
 - **Keeping only C>T**: Best single-channel accuracy (23.7%)
 - **Keeping only T>C**: Second-best single-channel accuracy (21.6%)
-
-**[INSERT FIGURE: Confusion matrix for C>T channel prediction]**
-*Cell: From `plot_cm_of_CtoT()` function*
-
-**[INSERT FIGURE: Confusion matrix for T>C channel prediction]**  
-*Cell: From `plot_cm_of_TtoC()` function*
 
 #### Trinucleotide Context Analysis
 - Systematic analysis of all 16 trinucleotide contexts
@@ -213,13 +186,11 @@ Key findings:
 
 <img width="1626" height="600" alt="image" src="https://github.com/user-attachments/assets/07bf7855-21c8-4951-9c98-6be02a90c57d" />
 
-*Cell: The cell with `plt.bar(feature_df['Feature'], feature_df['Importance'])` showing all 96 channels*
+*showing all 96 channels*
 
 **Feature Importance (6 mutation types)**:
 
 <img width="851" height="560" alt="image" src="https://github.com/user-attachments/assets/357f1051-2666-4211-b634-51dfc5bf3b93" />
-
-*Cell: The cell showing reduced 6-channel feature importance after grouping*
 
 **Key Findings**:
 - C>T channel is the most crucial
