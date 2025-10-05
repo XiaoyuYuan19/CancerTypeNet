@@ -1,7 +1,7 @@
 # CancerTypeNet: Tumor Type Classification using Mutational Signatures
 
 ## Team Members
-**Equal Contribution:** Johanna Aspholm, Emilia Miettinen, Jami Heljomaa, Hanlu Li, Xiaoyu Yuan, Mudong Guo, Hao Liu
+**Equal Contribution:** Johanna Aspholm, Hanlu Li, Xiaoyu Yuan, Mudong Guo, Hao Liu Emilia Miettinen, Jami Heljomaa,
 
 ---
 
@@ -302,36 +302,6 @@ accuracy = model.score(X_test, y_test)
 ```
 
 See notebooks for detailed implementation of each model.
-
----
-
-## Notebooks
-
-1. **`CancerTypeNet Tumor Type Classification using Mutational Signatures.ipynb`**
-   - Complete pipeline for all 6 models
-   - EDA and visualization
-   - Feature importance analysis
-   - Model comparison
-
-*(Output cleared for repository cleanliness - run cells to reproduce results)*
-
----
-
-## Limitations & Future Work
-
-### Current Limitations
-1. **Confusion Matrix Analysis**: Did not separately analyze cancer type vs. anatomical site predictions
-2. **Normalization**: Only tested StandardScaler and Median-MAD; other methods unexplored
-3. **Hyperparameter Tuning**: SVM not fully optimized; grid search incomplete for some models
-4. **Explainability**: Limited interpretation of why certain mutations predict specific cancer types
-
-### Future Directions
-- Implement SHAP values for model explainability
-- Test additional normalization techniques (robust scaling, quantile transformation)
-- Bayesian optimization for hyperparameter tuning
-- Multi-task learning (joint prediction of cancer type + anatomical site)
-- Incorporate clinical metadata (age, gender, tumor stage)
-- Deploy best model as web API for real-time predictions
 
 ---
 
