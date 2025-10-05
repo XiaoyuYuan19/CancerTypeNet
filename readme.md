@@ -54,7 +54,7 @@ The dataset consists of mutational catalogs and predicted signature activities f
 
 ### Mutation Load Analysis
 
-We analyzed the total mutation counts across cancer types for different datasets:
+We analyzed the total mutation counts across cancer types for different datasets
 
 Key findings:
 - WGS samples show higher mutation counts than WES samples
@@ -219,60 +219,6 @@ Key findings:
 4. **Deep Learning Advantage**: DNNs with dropout regularization achieve the best balance between accuracy and generalization.
 
 5. **C>T Dominance**: Across all models, C>T mutations emerged as the most informative feature for cancer type prediction.
-
----
-
-## Data Preprocessing
-
-### Key Steps
-1. **Cancer type extraction**: Parsed from sample names (format: `CancerType::SampleID`)
-2. **Class filtering**: Removed cancer types with <5 samples
-3. **Normalization**: 
-   - StandardScaler (mean=0, std=1) for DNN/SVM
-   - Median-MAD normalization for KNN
-   - WES data normalized to sum=1 for comparability with WGS
-4. **Train-test split**: 80-20 ratio with stratification by cancer type
-5. **Label encoding**: Converted cancer type strings to integer labels
-
----
-
-## Installation & Requirements
-
-```bash
-# Core dependencies
-pip install pandas numpy matplotlib seaborn scikit-learn
-
-# Deep learning
-pip install torch tensorflow keras
-
-# Visualization
-pip install plotly
-```
-
-**Python Version**: 3.8+
-
----
-
-## Usage
-
-```python
-# Load data
-import pandas as pd
-catalogs = pd.read_csv("path/to/WGS_PCAWG.96.csv")
-activities = pd.read_csv("path/to/WGS_PCAWG.activities.csv")
-
-# Preprocess
-from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import train_test_split
-
-# Train model (example: Random Forest)
-from sklearn.ensemble import RandomForestClassifier
-model = RandomForestClassifier()
-model.fit(X_train, y_train)
-accuracy = model.score(X_test, y_test)
-```
-
-See notebooks for detailed implementation of each model.
 
 ---
 
