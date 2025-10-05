@@ -48,8 +48,6 @@ The dataset consists of mutational catalogs and predicted signature activities f
 
 <img width="1189" height="989" alt="image" src="https://github.com/user-attachments/assets/771b1dd2-8fd6-473a-a4ec-4f84644c87a1" />
 
-` showing cancer type distributions*
-
 ---
 
 ## Exploratory Data Analysis
@@ -185,8 +183,6 @@ Key findings:
 **Feature Importance (96 channels)**:
 
 <img width="1626" height="600" alt="image" src="https://github.com/user-attachments/assets/07bf7855-21c8-4951-9c98-6be02a90c57d" />
-
-*showing all 96 channels*
 
 **Feature Importance (6 mutation types)**:
 
