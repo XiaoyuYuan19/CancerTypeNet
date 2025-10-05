@@ -46,7 +46,8 @@ The dataset consists of mutational catalogs and predicted signature activities f
 
 ### Data Distribution
 
-**[INSERT FIGURE: Cancer type distribution plots from the EDA section - 4 subplots showing WGS_PCAWG catalog, WGS_PCAWG activity, WES_TCGA catalog, WES_TCGA activity]**
+<img width="1189" height="989" alt="image" src="https://github.com/user-attachments/assets/771b1dd2-8fd6-473a-a4ec-4f84644c87a1" />
+
 *Cell: The cell with `fig, axes = plt.subplots(nrows=2, ncols=2, figsize=(12, 10))` showing cancer type distributions*
 
 ---
@@ -85,7 +86,8 @@ Key findings:
 - **TCGA WES**: 58% accuracy
 - **Other WES**: 52% accuracy
 
-**[INSERT FIGURE: Confusion matrix for PCAWG WGS Random Forest]**
+<img width="511" height="415" alt="image" src="https://github.com/user-attachments/assets/28bc007e-e955-495f-832f-fceeb60bbe3d" />
+
 *Cell: `ax = sns.heatmap(confusion_matrix(y_test_pcawg_wgs, model_pcawg_wgs.predict(X_test_pcawg_wgs)), annot = True)`*
 
 **Feature Importance Analysis**:
@@ -209,12 +211,14 @@ Key findings:
 
 **Feature Importance (96 channels)**:
 
-**[INSERT FIGURE: Bar plot of feature importance for 96 channels]**
+<img width="1626" height="600" alt="image" src="https://github.com/user-attachments/assets/07bf7855-21c8-4951-9c98-6be02a90c57d" />
+
 *Cell: The cell with `plt.bar(feature_df['Feature'], feature_df['Importance'])` showing all 96 channels*
 
 **Feature Importance (6 mutation types)**:
 
-**[INSERT FIGURE: Bar plot of feature importance for 6 mutation types]**
+<img width="851" height="560" alt="image" src="https://github.com/user-attachments/assets/357f1051-2666-4211-b634-51dfc5bf3b93" />
+
 *Cell: The cell showing reduced 6-channel feature importance after grouping*
 
 **Key Findings**:
